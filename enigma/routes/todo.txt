@@ -1,0 +1,7 @@
+
+every document contains field of admin:true or false to oobserve the page above
+
+Q10,11,12,20 Image Problem
+Remove fluxus logo and add logout button instead
+change the colour of the text field to brown in play arena 
+Chaneg the text colour of signin site

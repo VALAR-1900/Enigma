@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Admin Dashboard</title>
+    </head>
+    <body>
+        <center><h1>Admin Dashboard</h1></center>
+        <form id="logout" method="POST" action="/admin/logout">
+           <label for="logout">Admin Logout:</label>
+           <button id="logout" type="submit">LogOut</button>
+        </form>
+        <br>
+        <form id="getplayer" method="POST" action="/admin/get_player">
+            <label for="username_player" >Player Username: </label>
+            <input type="text" placeholder="Username to get the details" id="username_player" name="username_player" style="width: 200px;">
+            <input type="submit" name="Submit">
+        </form>
+
+         <form id="delete" method="POST" action="/admin/delete_player">
+            <button type="submit">Delete User</button>
+        </form>
+        
+        <h3>{{player_name}}</h3>
+        <br>
+        {{#if data}}
+        <table style="width: 100%; border=1px;">
+            <thead>
+                <tr>
+                    <td>Answer Entered</td>
+                    <td>For Level</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                    <tr>
+                        <td>
+                            {{this.answer}}
+                        </td>
+                        <td>
+                            {{this.number}}
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{/if}}
+    </body>
+</html>
